@@ -1,0 +1,21 @@
+  /* Heading styles */
+  h1 {
+    color: #a09999;
+    margin-bottom: 20px;
+    font-size: 50px;
+    
+  }
+  
+  /* Paragraph styles */
+  p {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 300px;
+  }
+  
+
+  
+  /* Button hover styles */
+  .button:hover {
+    background-color: #d68dc1;
+  }

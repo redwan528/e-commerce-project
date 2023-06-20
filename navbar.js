@@ -1,13 +1,21 @@
-const formOpenBtn = document.querySelector("#form-open"),
-  home = document.querySelector(".home"),
-  formContainer = document.querySelector(".form_container"),
-  formCloseBtn = document.querySelector(".form_close"),
-  signupBtn = document.querySelector("#signup"),
-  loginBtn = document.querySelector("#login"),
-  pwShowHide = document.querySelectorAll(".pw_hide");
+
+
+const formOpenBtn = document.querySelector("#form-open");
+const home = document.querySelector(".home");
+const formContainer = document.querySelector(".form_container");
+const formCloseBtn = document.querySelector(".form_close");
+const signupBtn = document.querySelector("#signup");
+const loginBtn = document.querySelector("#login");
+const pwShowHide = document.querySelectorAll(".pw_hide");
 
 formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+
+function closeForm() {
+  home.classList.remove("show");
+  formContainer.classList.remove("active");
+}
+
+formCloseBtn.addEventListener("click", closeForm);
 
 pwShowHide.forEach((icon) => {
   icon.addEventListener("click", () => {
@@ -26,8 +34,18 @@ signupBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.add("active");
 });
+
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.remove("active");
 });
 
+// Close the form when clicking outside the form container
+document.addEventListener("click", (e) => {
+  const isClickedInsideForm = formContainer.contains(e.target);
+  const isClickedOnFormOpenBtn = formOpenBtn.contains(e.target);
+  
+  if (!isClickedInsideForm && !isClickedOnFormOpenBtn) {
+    closeForm();
+  }
+});

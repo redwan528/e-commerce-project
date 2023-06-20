@@ -31,7 +31,7 @@ a {
 .nav_logo,
 .nav_link,
 .button {
-  color: #fff;
+  color: #ffffff;
 }
 .nav_logo {
   font-size: 25px;
@@ -44,7 +44,7 @@ a {
 }
 .button {
   padding: 6px 24px;
-  border: 2px solid #fff;
+  border: 2px solid #33023b;
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
@@ -203,6 +203,10 @@ a {
   margin-top: 15px;
   color: rgb(169, 158, 158);
 }
+#form-open {
+  color: #c600bc;
+  font-weight: bolder;
+}
 
 
 
@@ -228,22 +232,73 @@ a {
     text-align: center;
     margin-top: 50px;
   }
-  
-  /* Heading styles */
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Paragraph styles */
-  p {
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
 
-  
-  /* Button hover styles */
-  .button:hover {
-    background-color: #d68dc1;
-  }
+
+
+
+
+
+  /*table styling*/
+/* Style the table */
+.table {
+  border-collapse: collapse;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Adjust the maximum width as needed */
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  border: 2px solid black;
+  font-size: 16px; /* Increase the font size as desired */
+}
+
+.table th,
+.table td {
+  padding: 12px; /* Increase the padding as desired */
+  text-align: left;
+  border-bottom: 1px solid #2e2b2b;
+}
+
+.table th {
+  background-color: #f5f5f5; /* Add a background color to the table header */
+  font-weight: bold; /* Make the table header text bold */
+  color: #333; /* Set the text color */
+}
+
+.table td {
+  background-color: #ffffff; /* Add a background color to the table cells */
+  color: #333; /* Set the text color */
+}
+
+.table tr:hover {
+  background-color: #f9f9f9; /* Change the background color on hover */
+}
+
+/* Style the product images */
+.table .product-image {
+  width: 100px; /* Adjust the width of the product image column */
+}
+
+.table .product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Align the table content */
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+/* Add some spacing around the table */
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+#center-table{
+  background-color: #2e2b2b;
+}
