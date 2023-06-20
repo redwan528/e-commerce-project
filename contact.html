@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+
+  
+  <div class="container">
+    <h1>Contact Page</h1>
+    <p>Click the button below to open your email app:</p>
+    <button class="button" onclick="openEmailApp()">Send Email</button>
+  </div>
+
+  <script>
+    function openEmailApp() {
+      var emailAddress = 'your.email@example.com';
+      var subject = 'Hello';
+
+      var mailtoLink = 'mailto:' + encodeURIComponent(emailAddress) +
+                       '?subject=' + encodeURIComponent(subject);
+
+      window.location.href = mailtoLink;
+    }
+  </script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
