@@ -45,10 +45,20 @@ a {
 .button {
   padding: 6px 24px;
   border: 2px solid #33023b;
-  background: transparent;
+  background: purple;
   border-radius: 6px;
   cursor: pointer;
+  
 }
+
+.button, #form-open.button{
+  color: white;
+}
+
+.button:hover{
+background-color: rgb(167, 52, 140);
+}
+
 .button:active {
   transform: scale(0.98);
 }
