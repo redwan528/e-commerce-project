@@ -3,108 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Page</title>
-  <link rel="stylesheet" href="style.css" />
+ 
   <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-  </style>
+
 </head>
 <body>
- <!-- Header -->
- <header class="header">
-  <nav class="nav">
-    <a href="index.html" class="nav_logo">Tech Drop</a>
 
-    <ul class="nav_items">
-      <li class="nav_item">
-        <a href="product.html" class="nav_link">Products</a>
-        <a href="contact.html" class="nav_link">Contact</a>
-      </li>
-    </ul>
+  <div id="navbar"></div>
+  <script>
 
-    <button class="button" id="form-open">Login</button>
-  </nav>
-</header>
-
-
-<!-- Home -->
-<section class="home">
-  <div class="form_container">
-    <i class="uil uil-times form_close"></i>
-    <!-- Login From -->
-    <div class="form login_form">
-      <form action="#">
-        <h2>Login</h2>
-
-        <div class="input_box">
-          <input type="email" placeholder="Enter your email" required />
-          <i class="uil uil-envelope-alt email"></i>
-        </div>
-        <div class="input_box">
-          <input type="password" placeholder="Enter your password" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-
-        <div class="option_field">
-          <span class="checkbox">
-            <input type="checkbox" id="check" />
-            <label for="check">Remember me</label>
-          </span>
-          <a href="#" class="forgot_pw">Forgot password?</a>
-        </div>
-
-        <button class="button">Login Now</button>
-
-        <div class="login_signup">Don't have an account? <a href="#" id="signup">Sign up</a></div>
-      </form>
-    </div>
-
-    <!-- Signup Form -->
-    <div class="form signup_form">
-      <form action="#">
-        <h2>Signup</h2>
-
-        <div class="input_box">
-          <input type="email" placeholder="Enter your email" required />
-          <i class="uil uil-envelope-alt email"></i>
-        </div>
-        <div class="input_box">
-          <input type="password" placeholder="Create password" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-        <div class="input_box">
-          <input type="password" placeholder="Confirm password" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-
-        <button class="button">Signup Now</button>
-
-        <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
-      </form>
-
-   
-
-    </div>
-  </div>
-
+    $(function () {
+      $("#navbar").load("navbar.html");
+    });
+  </script>
  
   <div class="container">
     <h1>Contact Us</h1>
     <p>Click the button below to open your email app:</p>
     <button class="button" onclick="openEmailApp()">Send Email</button>
   </div>
-</section>
+ 
+ 
+
 
  
 
